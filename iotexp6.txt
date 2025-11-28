@@ -1,0 +1,21 @@
+Experiment 6: DC Motor
+
+Aim: Develop a ESP32 program to control DC motor in clockwise and anticlockwise direction.
+void setup() {
+// put your setup code here, to run once:
+pinMode(25,OUTPUT);
+pinMode(33,OUTPUT);
+pinMode(35,INPUT);
+}
+void loop() {
+// put your main code here, to run repeatedly:
+if(digitalRead(35))
+{
+digitalWrite(25,HIGH);
+digitalWrite(33,LOW);
+}
+else
+{
+digitalWrite(25,LOW);
+digitalWrite(33,HIGH);
+}
